@@ -1,0 +1,30 @@
+/*-----------------------------------------]
+
+	[Component Lean Stylesheet] - V 0.0.1
+	Author: Lucas Moreira (l.moreira@live.ca)
+	Created On: Dec - 28 - 2016 - Ubuntu 16.04
+	
+	Desc: Lighter version of the main stylesheet
+	imports to only pass variables and mixins.
+
+----------------------------------------]*/
+
+
+/*----
+	Global Variables
+-----*/
+@import './variables.scss';
+
+/*----
+	Global Mixins
+-----*/
+
+/*----
+	Responsive Breakpoints
+-----*/
+@import './responsive.scss';
+
+/*----
+  Typography
+-----*/
+

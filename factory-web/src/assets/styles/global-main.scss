@@ -1,0 +1,55 @@
+/*-----------------------------------------]
+
+	[Global Main Stylesheet] - V 0.0.1
+	Author: Lucas Moreira (l.moreira@live.ca)
+	Created On: Dec - 28 - 2016 - Ubuntu 16.04
+	
+	Desc: Main stylesheet comprises the
+	imports necessary to style the website
+	and avoids repetition inside the components
+
+----------------------------------------]*/
+
+/*----
+	Global Reset
+-----*/
+@import './reset.scss';
+
+/*----
+	Global Variables
+-----*/
+@import './variables.scss';
+
+/*----
+	Global Mixins
+-----*/
+
+/*----
+	Responsive Breakpoints
+-----*/
+@import './responsive.scss';
+
+/*----
+	Global Typography
+-----*/
+@import './typography.scss';
+
+/*----
+ 	Utilities
+-----*/
+@import './utilities.scss';
+
+/*----
+ 	Flex
+-----*/
+@import './flex.scss';
+
+/*---
+  Scaffold
+-----*/
+@import './scaffolding.scss';
+
+/*----
+  Buttons
+-----*/
+@import './buttons.scss';
