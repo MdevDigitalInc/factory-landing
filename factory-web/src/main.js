@@ -12,6 +12,9 @@ import App from './App.vue';
 import { routes  } from './routes.js';
 import store from './store/store.js';
 
+//Import Plugins
+import Validate     from './plugins/validate.js';
+
 // [ i18n - Internationalization ] ----------------------
 
 // Configure I18n Internationalization Locales
@@ -26,6 +29,7 @@ const locales = {
 Vue.use(VueI18n);
 Vue.use(VueResource);
 Vue.use(VueRouter);
+Vue.use(Validate);
 
 // Set Language Default [ ENGLISH ]
 Vue.config.lang = 'en';

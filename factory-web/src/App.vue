@@ -1,6 +1,5 @@
 <template>
   <main id="app">
-    <main-navigation></main-navigation>
     <transition name="fade">
       <router-view></router-view>
     </transition>
@@ -11,15 +10,7 @@
 
 
 <script>
-  
-  //Local Component registration
-  import MainNavigation from './components/shared/navigation.vue';
-  
   export default{
-
-    components: {
-      'main-navigation' : MainNavigation
-    }
   };
 </script>
 

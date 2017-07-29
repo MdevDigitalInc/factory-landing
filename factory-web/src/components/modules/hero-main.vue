@@ -1,6 +1,17 @@
 <template>
-  <section class="mdev-main-hero" :style="heroStyles" aria-role="presentation">
-    <h1> App Under Construction </h1>
+  <section class="mdev-main-hero-bkg" aria-role="presentation">
+    <div class="mdev-main-hero" :style="heroStyles">
+      <div class="mdev-main-wrapper">
+       <!-- Main Logo --> 
+        <div class="mdev-main-brand">
+          <img :src="loadImage('brand-the-factory.svg')">  
+        </div>
+
+        <h2 class=" --font-teal">Canada's Biggest Indoor</h2>
+        <h1 class=" --font-white">Family Entertainment Centre</h1>
+      </div>
+    </div>
+    <div class="mdev-splash" :style="splashStyle"></div>
   </section>
 </template>
 
@@ -12,8 +23,12 @@
     data: function() {
       return{
         heroStyles: {
-            backgroundColor: "#2f2f2f",
-            backgroundSize: 'cover'
+          backgroundImage: 'url(' + this.loadImage('bkg-hero-main.png') + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: 'top center'
+        },
+        splashStyle: {
+          backgroundImage: 'url(' + this.loadImage('splash-main.png') + ')'
         }
       };
     },
@@ -36,102 +51,77 @@
   /*--------------------------------------*/
   @import '../../assets/styles/component-lean-main.scss';
 
+  .mdev-main-brand {
+    width: 25%;
+    margin: 0 auto 40px auto;
+  }
+
+  .mdev-main-hero-bkg {
+    background: $factory-red;
+    position: relative;
+  }
+
+  .mdev-main-hero {
+    text-align: center;
+    padding-top: 90px;
+    position:relative;
+    z-index: 10;
+    background-position: center top;
+    padding-bottom: 70px;
+    clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 85%);
+    
+    @media screen and ($laptop-only-comp) {
+      padding-bottom: 230px;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
+    } 
+
+    @media screen and ($tablet-only-comp) {
+      padding-bottom: 130px;
+      clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 78%);
+    }
+
+    @media screen and ($phone-only-comp) {
+    }
+
+    @media screen and ($desktop-up-comp) {
+      padding-bottom: 360px;
+      clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 73%);
+    }
+
+    h1 {
+      font-weight: 800;
+      font-family: $body-font;
+      letter-spacing: 7px;
+      margin-top: 5px;
+
+      @media screen and ($phone-only-comp) {
+        letter-spacing: 2px;
+      }
+    }
+
+    h2 {
+      letter-spacing: 5px;
+
+      @media screen and ($phone-only-comp) {
+        letter-spacing: 2px;
+      }
+    }
+
+  }
+
+  .mdev-splash {
+    width: 100%;
+    position: absolute;
+    padding-top: 17.7%;
+    bottom: -2px;
+    z-index: 20;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
   /*--------------------------------------*/
   /* Main Component Styles                */
   /*--------------------------------------*/
-
-  .mdev-main-hero {
-    height: 100vh;
-    position: relative;
-    background-position: -62% -80px;
-
-    @media screen and ('$tablet-up-comp') {
-      background-position: center -80px;
-    }
-
-    h1{
-      width: 100%;
-      text-align: center;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      text-transform: uppercase;
-      color: $white;
-      font-size: 3.2vw;
-    }
-  }
-
-  .mdev-main-hero-features {
-    width: 100%;
-    background: $charcoal-grey;
-    padding: 35px 0;
-    position: absolute;
-    bottom: 0;
-    color: $white;
-  }
-
-  .mdev-main-hero-heading,
-  .mdev-hero-feature-detail {
-    width: 100%;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0);
-    transition: all, .3s;
-
-    @media screen and ('$tablet-up-comp') {
-      width: 18%;
-    }
-
-    &:hover {
-      text-shadow: 1px 1px 3px rgba(0,0,0,.5);
-      cursor: pointer;
-    }
-  }
-
-  .mdev-main-hero-heading {
-    letter-spacing: 2px;
-    line-height: 33px;
-    margin-right: 30px;
-  }
-
-  .mdev-hero-feature-detail {
-    width: 50%;
-  }
-
-  .mdev-hero-feature-desc {
-    width: 70%;
-
-    span {
-      display: block;
-      width: 100%;
-      line-height: 22px;
-    }
-  }
-
-  .mdev-hero-feature-icon {
-    width: 30%;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  //Wrapper Hack for Flex
-  .mdev-main-wrapper {
-    flex-wrap: wrap;
-
-    @media screen and ('$tablet-up-comp') {
-      flex-wrap: nowrap;
-    }
-  }
-
-  // Escaped media query to avoid repetition
-  @media screen and ('$phone-only-comp') {
-    .mdev-main-hero-heading {
-      text-align: center;
-      margin-bottom: 30px;
-      margin-right: 0;
-    }
-  }
-
   /*--------------------------------------*/
 
 </style>

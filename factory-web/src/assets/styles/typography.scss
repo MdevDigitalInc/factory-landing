@@ -7,6 +7,7 @@ body {
   font-family: $main-font;
   font-size: 16px;
   color: $black;
+  background: $factory-white;
 }
 
 /* Headings & Body Copy */
@@ -24,6 +25,7 @@ h6,.h6, {
   font-family: $main-font;
   font-weight: 700;
   color: inherit;
+  text-transform: uppercase;
 }
 
 // Responsive Font Size Maps
@@ -34,14 +36,16 @@ $p-font-sizes: (
 );
 
 $h1-font-sizes: (
-  null  : 25px,
-  $tablet-up : 28px,
-  $desktop-up: 70px
+  null  : 20px,
+  $tablet-up : 32px,
+  $laptop-up : 40px,
+  $desktop-up: 65px
 );
 
 $h2-font-sizes: (
-  null  : 30px,
-  $tablet-up : 32px,
+  null  : 18px,
+  $tablet-up : 24px,
+  $laptop-up : 28px,
   $desktop-up: 35px
 );
 
@@ -143,3 +147,27 @@ a {
   }
 }
 
+// Font Modifiers
+.--font-red {
+  color: $factory-red;
+}
+
+.--font-teal {
+  color: $factory-teal;
+}
+
+.--font-yellow {
+  color: $factory-yellow;
+}
+
+.--font-green {
+  color: $factory-green;
+}
+
+.--font-white {
+  color: $factory-white;
+}
+
+.--font-charcoal {
+  color: $factory-charcoal;
+}
