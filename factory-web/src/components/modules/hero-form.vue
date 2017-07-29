@@ -3,7 +3,7 @@
     <div class="mdev-main-wrapper">
       <div class="flex">
         <div class="mdev-hero-form-content">
-          <h2>Opening</h2>
+          <h2 class="--font-teal">Opening</h2>
           <h1>Winter 2017</h1>
           <p>
             Coming soon to London Ontario, a massive indoor amusement park with fun filled activities for all ages!
@@ -11,7 +11,7 @@
           <p>
             Would you like to be first to see the transformation of the Kellogg's building and get access to exclusive deals?
           </p>
-          <h3 class="u-capitalize">Subscribe to our e-newsletter</h3>
+          <h3 class="u-capitalize --font-teal">Subscribe to our e-newsletter</h3>
         </div>
         <div class="mdev-form-column"> 
           <div class="mdev-main-form">
@@ -39,7 +39,7 @@
               tab-index="3"
               aria-lable="Subscribe To Our E-Newsletter"
               @click="join"
-              class="mdev-form-button"> Sign Up </button>
+              class="mdev-form-button u-uppercase"> Sign Up </button>
           </div>
         </div>
       </div>
@@ -103,7 +103,30 @@
   
   .mdev-hero-form-content {
     width: 50%;
-    padding: 0 10%;
+    padding-left: 16%;
+    position: relative;
+    top: -3vw;
+
+    h1,
+    h2 {
+      font-family: $body-font;
+    }
+
+    h1 {
+      letter-spacing: 4px;
+    }
+
+    h2 {
+      letter-spacing: 3px;
+      font-weight: 400;
+    }
+
+    p {
+      font-family: $main-font;
+      color: black;
+      margin-bottom: 20px;
+      font-weight: 300;
+    } 
   }
 
   .mdev-form-column {
@@ -140,22 +163,21 @@
       color: black;
 
       &:last-child {
-        margin-top: 20px;
+        margin-top: 40px;
       }
 
       &:focus {
         outline: none;
       }
-
-      &:placeholder-shown {
-        color: black;
-      }
+    }
+    input:placeholder-shown {
+      color: black !important;
     }
   }
 
   .mdev-form-container {
     background: $factory-white;
-    padding: 40px 20px;
+    padding: 70px 20px;
     text-align: left;
     margin-top: 15px;
   }
@@ -163,6 +185,21 @@
   .mdev-form-brand {
     width: 50%;
     margin: 15px auto;
+  }
+
+  .mdev-form-button {
+    display: inline-block;
+    position: absolute;
+    font-family: $body-font;
+    background: $factory-teal;
+    width: auto;
+    color: $white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 15px 40px;
+    border: none;
+    left: 50%;
+    transform: translate3d(-50%, -40%, 0);
   }
 
 </style>
