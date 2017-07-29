@@ -44,6 +44,9 @@
         </div>
       </div>
     </div>
+    <div class="mdev-carabiners">
+      <img :src="loadImage('zipline.png')" />
+    </div>
   </section>
 </template>
 
@@ -99,6 +102,7 @@
   .mdev-signup-area {
     position: relative;
     z-index: 30;
+    margin-bottom: -10vw;
   }
   
   .mdev-hero-form-content {
@@ -200,6 +204,16 @@
     border: none;
     left: 50%;
     transform: translate3d(-50%, -40%, 0);
+  }
+
+  .mdev-carabiners {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+
+    img {
+      width: 31%;
+    }
   }
 
 </style>

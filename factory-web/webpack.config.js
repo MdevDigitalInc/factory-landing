@@ -90,8 +90,8 @@ module.exports = {
               optimizationLevel: 2
             },
             pngquant: {
-              quality: '85-90',
-              speed: 4
+              quality: '50-80',
+              speed: 3
             },
             svgo: {
               plugins: [
