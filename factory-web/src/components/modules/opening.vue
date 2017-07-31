@@ -6,6 +6,7 @@
       </div>
     </div>
     <div class="mdev-opening">
+      <div class="mdev-splash-teal" :style="splashStyle"></div>
       <div class="mdev-main-wrapper">
         <div class="mdev-title-container">
           <h3>Opening</h3>
@@ -19,11 +20,15 @@
 <script>
  	export default {
     data: function() {
+      // AIzaSyDPrlFCsuhoVhybfZv5FGVfwXjnmz_B0lQ - google API key
       return{
         heroStyles: {
           backgroundImage: 'url(' + this.loadImage('bkg-activities.png') + ')',
           backgroundSize: 'cover',
           backgroundPosition: 'top center'
+        },
+        splashStyle: {
+          backgroundImage: 'url(' + this.loadImage('splash-blue.png') + ')'
         }
       };
     },
@@ -58,6 +63,7 @@
   .mdev-opening {
     width: 100%;
     padding: 80px 0;
+    position: relative;
     background: $factory-teal;
 
     .mdev-title-container {
@@ -68,5 +74,33 @@
       font-family: $body-font;
       letter-spacing: 3px;
     }
+  }
+
+  .mdev-title-container {
+    width: auto;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate3d( -50%, 0 ,0);
+    
+    h1, h3 {
+      font-family: $body-font;
+    }
+
+    h1 {
+      letter-spacing: 13px;
+    }
+    h3 {
+      letter-spacing: 3px;
+    }
+  }
+
+  .mdev-splash-teal {
+    width: 100%;
+    padding-top: 12%;
+    position: absolute;
+    top: -120px;
+    background-position: top center;
+    background-repeat: repeat-x;
   }
 </style>

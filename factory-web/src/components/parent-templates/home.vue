@@ -5,6 +5,7 @@
     <factory-vision></factory-vision>
     <activities></activities>
     <opening-section></opening-section>
+    <factory-map></factory-map>
   </section>
 </template>
 
@@ -19,6 +20,7 @@
   import FactoryVision  from '../modules/factory-vision.vue';
   import Activities     from '../modules/activities.vue';
   import OpeningSection  from '../modules/opening.vue';
+  import FactoryMap  from '../modules/map.vue';
   
   export default{
 
@@ -27,7 +29,8 @@
       'hero-form'       : HeroForm,
       'factory-vision'  : FactoryVision,
       'opening-section' : OpeningSection,
-      'activities'      : Activities
+      'activities'      : Activities,
+      'factory-map'      : FactoryMap
     }
   };
 </script>
