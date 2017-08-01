@@ -1,7 +1,7 @@
 <template>
   <section class="mdev-signup-area"> 
     <div class="mdev-main-wrapper">
-      <div class="flex">
+      <div class="flex flex-wrap">
         <div class="mdev-hero-form-content">
           <h2 class="--font-teal">Opening</h2>
           <h1>Winter 2017</h1>
@@ -111,6 +111,17 @@
     position: relative;
     top: -3vw;
 
+    @media screen and ( $phone-only-comp ) {
+      width: 100%;
+      padding: 30px 0 30px 0;
+      top: 0;
+      text-align: center;
+    }
+
+    @media screen and ( $tablet-only-comp ) {
+      padding-left: 7%;
+    }
+
     h1,
     h2 {
       font-family: $body-font;
@@ -136,6 +147,10 @@
   .mdev-form-column {
     width: 50%;
     position: relative;
+
+    @media screen and ( $phone-only-comp ) {
+      width: 100%;
+    }
   }
 
   .mdev-main-form {
@@ -145,7 +160,21 @@
     margin: 0 auto;
     position: relative;
     text-align: center;
-    top: -60%;
+    top: -15vw;
+
+    @media screen and ( $xl-up-comp ) {
+      top: -10vw !important;
+    }
+
+    @media screen and ( $phone-only-comp ) {
+      top: 0;
+      width: 100%;
+      margin-bottom: 80px;
+    }
+
+    @media screen and ( $tablet-only-comp ) {
+      width: 80%;
+    }
 
     h4 {
       font-family: $body-font;
@@ -202,18 +231,72 @@
     letter-spacing: 3px;
     padding: 15px 40px;
     border: none;
+    transition: all, .3s;
     left: 50%;
     transform: translate3d(-50%, -40%, 0);
+
+    @media screen and ( $laptop-only-comp ) {
+      letter-spacing: 1px;
+      padding: 15px 30px;
+    }
+
+    @media screen and ( $phone-only-comp ) {
+      font-size: 19px;
+      letter-spacing: 1px;
+      padding: 15px 30px;
+    }
+
+    @media screen and ( $tablet-only-comp ) {
+      letter-spacing: 1px;
+      padding: 15px 34px;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      background: $factory-yellow;
+      cursor: pointer;
+    }
   }
 
   .mdev-carabiners {
     position: absolute;
     width: 100%;
     top: 60px;
+    z-index: -1;
+
+    @media screen and ( $phone-only-comp ) {
+      display: none;
+    }
+
+    @media screen and ($laptop-only-comp ) {
+      top: 15vw;
+    }
+    
+    @media screen and ($tablet-only-comp ) {
+      top: 37vw;
+    }
+
+    @media screen and ( $xl-up-comp ) {
+      top: -40px;
+    }
 
     img {
       width: 31%;
+
+      @media screen and ($tablet-only-comp) {
+        width: 51%;  
+      }
+
+      @media screen and ( $xl-up-comp ) {
+        width: 40%;
+      }
     }
+  }
+
+  .mdev-error {
+    color: $factory-red !important;
+    border-bottom: 1px solid $factory-red !important;
   }
 
 </style>

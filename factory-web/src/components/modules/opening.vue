@@ -89,9 +89,30 @@
 
     h1 {
       letter-spacing: 13px;
+
+      @media screen and ( $tablet-only-comp ) {
+        font-size: 80px;
+      }
+
+      @media screen and ( $phone-only-comp ) {
+        font-size: 44px;
+        letter-spacing: 4px;
+      }
+
+      @media screen and ( $xl-up-comp ) {
+        font-size: 95px;
+      }
     }
     h3 {
       letter-spacing: 3px;
+
+      @media screen and ( $tablet-only-comp ) {
+        font-size: 40px;
+      }
+
+      @media screen and ( $xl-up-comp ) {
+        font-size: 40px;
+      }
     }
   }
 
@@ -102,5 +123,13 @@
     top: -120px;
     background-position: top center;
     background-repeat: repeat-x;
+
+    @media screen and ( $phone-only-comp ) {
+      padding-top: 44%;
+    }
+
+    @media screen and ( $tablet-only-comp ) {
+      padding-top: 17%;
+    }
   }
 </style>

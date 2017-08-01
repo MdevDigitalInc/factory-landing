@@ -76,7 +76,7 @@
     } 
 
     @media screen and ($tablet-only-comp) {
-      padding-bottom: 130px;
+      padding-bottom: 190px;
       clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 78%);
     }
 
@@ -86,6 +86,10 @@
     @media screen and ($desktop-up-comp) {
       padding-bottom: 360px;
       clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 73%);
+    }
+
+    @media screen and ( $xl-up-comp ) {
+      padding-bottom: 450px;
     }
 
     h1 {

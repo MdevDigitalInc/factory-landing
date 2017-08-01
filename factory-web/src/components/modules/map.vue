@@ -1,32 +1,42 @@
 <template>
   <section class="mdev-map-location"> 
       <div class="mdev-google-map" id="map"></div>
-      <div class="mdev-building-info">
-        <h3>Keeping The Essence of the</h3>
-        <h2>Kellogg's Building</h2>
+      <div class="mdev-main-wrapper">
+        <div class="mdev-building-info">
+          <h3>Keeping The Essence of the</h3>
+          <h2>Kellogg's Building</h2>
 
-        <p>
-          We know that the building is a unique and significant part of London's history and we want to preserve the look and feel of the space as much as possible. You'll see signs of the old Factory with exposed pipes and concrete, with minimal decorations to detract from the building's character. The Factory will be a space filled with memories, and we hope to build new positive ones for London.
-        </p>
-      </div>
-
+          <p>
+            We know that the building is a unique and significant part of London's history and we want to preserve the look and feel of the space as much as possible. You'll see signs of the old Factory with exposed pipes and concrete, with minimal decorations to detract from the building's character. The Factory will be a space filled with memories, and we hope to build new positive ones for London.
+          </p>
+        </div>
+       </div>
   </section>
 </template>
 
 <script>
   export default {
-    data: function () {
-      return {
-      
-      };
-    },
     
     mounted: function() {
-      var uluru = {lat: 42.9920278, lng: -81.21443060000001};
-      var ulurucenter = {lat: 42.9920278, lng: -81.21711194515228};
+      var windowSize = $(window).width();
+      var kelloggs = {lat: 42.9920278, lng: -81.21443060000001};
+
+      if ( windowSize <= 640 ) {
+        var kelloggscenter = {lat: 42.98977719559234, lng: -81.21444046497345};
+        var zoom = 16;
+      }
+      else if ( windowSize >= 1921 ) {
+        var kelloggscenter = {lat: 42.9920278, lng: -81.21711194515228};
+        var zoom = 18;
+      }
+      else {
+        var kelloggscenter = {lat: 42.9920278, lng: -81.21711194515228};
+        var zoom = 17;
+      }
+
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 17,
-        center: ulurucenter,
+        zoom: zoom,
+        center: kelloggscenter,
         zoomControl: false,
         mapTypeControl: false,
         scaleControl: false,
@@ -224,11 +234,11 @@
           ]
       });
       var marker = new google.maps.Marker({
-        position: uluru,
+        position: kelloggs,
         map: map
       });
     }
-  }
+  };
 </script>
 
 <style lang="scss" scoped> 
@@ -244,7 +254,11 @@
   .mdev-map-location {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    padding: 20vh 0;
+
+    @media screen and ( $phone-only-comp ) {
+      padding: 60vh 0 10vh 0;
+    }
   }
 
   .mdev-google-map {
@@ -259,6 +273,30 @@
   .mdev-building-info {
     position: relative;
     z-index: 10;
+    width: 50%;
+    padding: 40px;
+    color: $factory-white;
+    border: 8px solid $factory-red;
+    background-color: rgba( 0, 0, 0, .6);
+
+    @media screen and ( $phone-only-comp ) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    h2, h3 {
+      font-family: $body-font;
+    }
+
+    h2 {
+      letter-spacing: 5px;
+    }
+
+    h3 {
+      letter-spacing: 4px;
+    }
   }
+  
+
 
 </style>

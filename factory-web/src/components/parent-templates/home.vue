@@ -6,6 +6,7 @@
     <activities></activities>
     <opening-section></opening-section>
     <factory-map></factory-map>
+    <main-footer></main-footer>
   </section>
 </template>
 
@@ -19,8 +20,9 @@
   import HeroForm       from '../modules/hero-form.vue';
   import FactoryVision  from '../modules/factory-vision.vue';
   import Activities     from '../modules/activities.vue';
-  import OpeningSection  from '../modules/opening.vue';
-  import FactoryMap  from '../modules/map.vue';
+  import OpeningSection from '../modules/opening.vue';
+  import FactoryMap     from '../modules/map.vue';
+  import Footer         from '../modules/footer.vue';
   
   export default{
 
@@ -30,7 +32,8 @@
       'factory-vision'  : FactoryVision,
       'opening-section' : OpeningSection,
       'activities'      : Activities,
-      'factory-map'      : FactoryMap
+      'factory-map'      : FactoryMap,
+      'main-footer'      : Footer
     }
   };
 </script>

@@ -6,7 +6,7 @@
         <p class="vision-paragraph">
           We have an impressive 160,000 square feet and we want to fill every last inch with endless fun for the whole family. High ropes, zip-lines, trampoline park, ultimate warrior course, arcade, kid's soft play, laser tag, virtual reality, escape rooms, and more - these attractions are all in the plans for The Factory and are catered to all ages and skill levels.
         </p>
-        <div class="flex">
+        <div class="flex flex-wrap">
           <p>
             We won't just cater to the adventurous: we will have a restaurant, a lounge area with Wifi and comfortable parent zones so you can sit back and relax or get some work done while your kids test their skills on the ropes course.
           </p>
@@ -63,6 +63,15 @@
     color: $factory-white;
     clip-path: polygon(0% 19%, 100% 2%, 100% 100%, 0% 100%);
     width: 100%;
+
+    @media screen and ( $phone-only-comp ) {
+      clip-path: polygon(0% 5%, 100% 2%, 100% 100%, 0% 100%);
+    }
+
+    @media scren and ( $tablet-only-comp ) {
+     clip-path: polygon(0% 15%, 100% 6%, 100% 100%, 0% 100%);
+    }
+
     h2 {
       font-family: $body-font;
       letter-spacing: 3px;
@@ -72,11 +81,36 @@
 
   .mdev-vision-hero {
     padding-top: 210px;
-    padding-bottom: 240px;
+    padding-bottom: 280px;
     clip-path: polygon(0% 12%, 100% -4%, 100% 73%, 0% 100%);
+
+    @media screen and ( $phone-only-comp ) {
+      padding-top: 160px;
+      padding-bottom: 160px;
+      clip-path: polygon(0% 4%, 100% -4%, 100% 97%, 0% 100%);
+    }
+
+    @media screen and ( $tablet-only-comp ) {
+      clip-path: polygon(0% 12%, 100% -4%, 100% 85%, 0% 100%);
+      padding-top: 270px;
+      padding-bottom: 190px;
+    }
+
+    @media screen and ( $xl-up-comp ) {
+      padding-top: 270px;
+      padding-bottom: 370px;
+    }
 
     .mdev-main-wrapper {
       padding: 0 15%;
+
+      @media screen and ( $tablet-only-comp ) {
+        padding: 0 8%;
+      }
+
+      @media screen and ( $phone-only-comp ) {
+        padding: 0;
+      }
     }
 
     .vision-paragraph {
@@ -87,6 +121,11 @@
     .flex p{
       width: 50%;
       padding: 30px 40px;
+
+      @media screen and ( $phone-only-comp ) {
+        width: 100%;
+        padding: 10px 0;
+      }
 
       &:first-child {
         padding-left: 0;

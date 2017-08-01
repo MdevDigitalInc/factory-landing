@@ -41,11 +41,11 @@ $tablet-only-comp:  "min-width:#{lower-bound($tablet-range)}) and (max-width:#{u
 $laptop-up:     "#{$screen} and (min-width:#{lower-bound($laptop-range)})" !default;
 $laptop-up-comp:     "min-width:#{lower-bound($laptop-range)}" !default;
 $laptop-only:   "#{$screen} and (min-width:#{lower-bound($laptop-range)}) and (max-width:#{upper-bound($desktop-range)})" !default;
-$laptop-only-comp:   "min-width:#{lower-bound($laptop-range)}) and (max-width:#{upper-bound($desktop-range)}" !default;
+$laptop-only-comp:   "min-width:#{lower-bound($laptop-range)}) and (max-width:#{upper-bound($laptop-range)}" !default;
 $desktop-up:    "#{$screen} and (min-width:#{lower-bound($desktop-range)})" !default;
 $desktop-up-comp:    "min-width:#{lower-bound($desktop-range)}" !default;
 $desktop-only:  "#{$screen} and (min-width:#{lower-bound($desktop-range)}) and (max-width:#{upper-bound($desktop-range)})" !default;
 $desktop-only-comp:  "min-width:#{lower-bound($desktop-range)}) and (max-width:#{upper-bound($desktop-range)}" !default;
 $xl-up:   "#{$screen} and (min-width:#{lower-bound($xl-range)})" !default;
-$xl-up-comp:   "#min-width:#{lower-bound($xl-range)}" !default;
+$xl-up-comp:   "min-width: 1921px" !default;
 /* stylelint-enable */
