@@ -1,8 +1,12 @@
 <template>
   <section class="mdev-opening-soon">
     <div class="mdev-activities-soon" :style="heroStyles">
-      <div class="mdev-main-wrapper">
-        CONTENT GOES HERE
+      <div class="mdev-main-wrapper  u-text-center --font-white">
+        <h1 class="u-uppercase">What else is there to do?</h1>
+        <p>
+          We will be updating with photos and renderings as we build the space
+        </p>
+        <h3 class="--font-white u-capitalize-initial">Check back again!</h3>
       </div>
     </div>
     <div class="mdev-opening">
@@ -57,7 +61,25 @@
 	/*--------------------------------------*/
   .mdev-activities-soon {
     width: 100%;
-    height: 100vh;
+    padding: 30vh 0;
+
+    h1, h3 {
+      font-family: $body-font;
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      letter-spacing: 2px;
+    }
+    h1 {
+      letter-spacing: 5px;
+    }
+
+    p {
+      padding: 0 40%;
+      margin: 25px 0 45px 0;
+    }
   }
 
   .mdev-opening {
