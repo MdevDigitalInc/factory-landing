@@ -97,6 +97,7 @@ $link-font-sizes: (
 p {
   line-height: 24px;
   @include font-size($p-font-sizes);
+  letter-spacing: 1px;
 }
 
 h1,

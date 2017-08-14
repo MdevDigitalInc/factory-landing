@@ -46,7 +46,7 @@
 	};
 </script>
 
-<style lang="scss"> 
+<style lang="scss" scoped> 
   
 	/*-----/
 	Global Main
@@ -61,7 +61,7 @@
     position: relative;
     background: $factory-red;
     color: $factory-white;
-    clip-path: polygon(0% 19%, 100% 2%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 24%, 100% 2%, 100% 100%, 0% 100%);
     width: 100%;
 
     @media screen and ( $phone-only-comp ) {
@@ -80,7 +80,7 @@
   }
 
   .mdev-vision-hero {
-    padding-top: 210px;
+    padding-top: 240px;
     padding-bottom: 280px;
     clip-path: polygon(0% 12%, 100% -4%, 100% 73%, 0% 100%);
 
@@ -114,7 +114,7 @@
     }
 
     .vision-paragraph {
-      padding: 30px 0;
+      padding: 30px 10px;
       border-bottom: 2px solid $factory-white;
     }
 
@@ -128,11 +128,11 @@
       }
 
       &:first-child {
-        padding-left: 0;
+        padding-left: 10px;
       }
 
       &:last-child {
-        padding-right: 0;
+        padding-right: 10px;
       }
     }
   }

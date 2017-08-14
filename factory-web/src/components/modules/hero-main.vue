@@ -2,6 +2,14 @@
   <section class="mdev-main-hero-bkg" aria-role="presentation">
     <div class="mdev-main-hero" :style="heroStyles">
       <div class="mdev-main-wrapper">
+      <div class="mdev-main-icons --font-white">
+        <a href="https://twitter.com/FactoryLDNont" alt="Follow us on Twitter">
+          <i class="fa fa-fw fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/factoryldnont/ " alt="Follow us on Instagram">
+          <i class="fa fa-fw fa-instagram"></i>
+        </a>
+      </div>
        <!-- Main Logo --> 
         <div class="mdev-main-brand">
           <img :src="loadImage('brand-the-factory.svg')">  
@@ -56,6 +64,15 @@
     margin: 0 auto 40px auto;
   }
 
+  .mdev-main-icons {
+    text-align: right;
+    font-size: 32px;
+    position: absolute;
+    top: -65px;
+    width: 100%;
+
+  }
+
   .mdev-main-hero-bkg {
     background: $factory-red;
     position: relative;
@@ -93,7 +110,7 @@
     }
 
     h1 {
-      font-weight: 800;
+      font-weight: 500;
       font-family: $body-font;
       letter-spacing: 7px;
       margin-top: 5px;

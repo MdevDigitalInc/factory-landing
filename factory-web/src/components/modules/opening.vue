@@ -3,7 +3,7 @@
     <div class="mdev-activities-soon" :style="heroStyles">
       <div class="mdev-main-wrapper  u-text-center --font-white">
         <h1 class="u-uppercase">What else is there to do?</h1>
-        <p>
+        <p class="mdev-large-text">
           We will be updating with photos and renderings as we build the space
         </p>
         <h3 class="--font-white u-capitalize-initial">Check back again!</h3>
@@ -13,7 +13,7 @@
       <div class="mdev-splash-teal" :style="splashStyle"></div>
       <div class="mdev-main-wrapper">
         <div class="mdev-title-container">
-          <h3>Opening</h3>
+          <h2>Opening</h2>
           <h1 class="--font-white">Winter 2018</h1>
         </div>
       </div>
@@ -59,9 +59,13 @@
 	/*--------------------------------------*/
 	/* Main Component Styles                */
 	/*--------------------------------------*/
+  .mdev-large-text {
+    font-size: 30px;
+    line-height: 35px;
+  }
   .mdev-activities-soon {
     width: 100%;
-    padding: 30vh 0;
+    padding: 20vh 0;
 
     @media screen and ($tablet-only-comp) {
       padding: 20vh 0;
@@ -85,7 +89,7 @@
     }
 
     p {
-      padding: 0 40%;
+      padding: 0 30%;
       margin: 25px 0 45px 0;
 
       @media screen and ($tablet-only-comp) {
@@ -111,6 +115,11 @@
     h1 {
       font-family: $body-font;
       letter-spacing: 3px;
+      font-size: 110px;
+    }
+
+    h2 {
+      font-size: 50px;
     }
   }
 
@@ -121,12 +130,12 @@
     left: 50%;
     transform: translate3d( -50%, 0 ,0);
     
-    h1, h3 {
+    h1, h2 {
       font-family: $body-font;
     }
 
     h1 {
-      letter-spacing: 13px;
+      letter-spacing: 7px;
 
       @media screen and ( $tablet-only-comp ) {
         font-size: 80px;

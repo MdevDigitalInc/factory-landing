@@ -4,19 +4,19 @@
       <div class="flex flex-wrap">
         <div class="mdev-hero-form-content">
           <h2 class="--font-teal">Opening</h2>
-          <h1>Winter 2017</h1>
+          <h1>Winter 2018</h1>
           <p>
             Coming soon to London Ontario, a massive indoor amusement park with fun filled activities for all ages!
           </p>
           <p>
             Would you like to be first to see the transformation of the Kellogg's building and get access to exclusive deals?
           </p>
-          <h3 class="u-capitalize --font-teal">Subscribe to our e-newsletter</h3>
+          <h3 class="u-capitalize-initial --font-teal">Subscribe to our e-newsletter</h3>
         </div>
         <div class="mdev-form-column"> 
           <div class="mdev-main-form">
             <img class="mdev-form-brand" :src="loadImage('brand-the-factory.svg')" />
-            <h4 class="u-capitalize --font-white">Get exclusive news & deals</h4>
+            <h4 class="u-capitalize-initial --font-white">Get exclusive news & deals</h4>
             <div class="mdev-form-container">
               <input
                 data-required
@@ -225,13 +225,14 @@
     background: $factory-teal;
     width: auto;
     color: $white;
-    font-size: 20px;
-    letter-spacing: 3px;
-    padding: 15px 40px;
+    font-size: 23px;
+    padding: 10px 45px;
     border: none;
     transition: all, .3s;
     left: 50%;
     transform: translate3d(-50%, -40%, 0);
+    -webkit-font-smoothing: subpixel-antialiased;
+
 
     @media screen and ( $laptop-only-comp ) {
       letter-spacing: 1px;
@@ -250,7 +251,7 @@
     }
 
     &:hover {
-      background: $factory-yellow;
+      background: #0a6669;
       cursor: pointer;
     }
   }

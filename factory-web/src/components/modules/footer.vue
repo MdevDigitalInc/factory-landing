@@ -1,6 +1,6 @@
 <template>
   <footer class="mdev-main-footer">
-    2017  &copy; The Factory | <a class="fact-link" href="mailto:info@thefactory.ca">info@thefactory.ca</a>
+    2017  &copy; The Factory | <a class="fact-link" href="mailto:info@thefactorylondon.ca">info@thefactorylondon.ca</a>
   </footer>
 </template>
 

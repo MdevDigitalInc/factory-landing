@@ -4,7 +4,7 @@
 
       <div class="mdev-activity-row flex flex-hor-between order-alpha climb-activity">
         <div class="mdev-activity-description">
-          <h2>Climb</h2>
+          <h1>Climb</h1>
           <p>
             Start at 16ft and make your way up the 75ft ropes course. Zipline between platforms and even take the plunge off the 70ft drop (if you dare)!
           </p>
@@ -16,7 +16,7 @@
 
       <div class="mdev-activity-row flex flex-hor-between order-beta jump-activity">
         <div class="mdev-activity-description">
-          <h2>Jump</h2>
+          <h1>Jump</h1>
           <p>
             21,000 square feet of trampoline excitement. We've got dodgeball courts, tumble tracks, a 7,000 sqft airbag, and a joust pit. Test your skills on the Ultimate Warrior course or try to tame the Adrenalator, but make sure to save some energy for Trampoline Meltdown.
           </p>
@@ -28,7 +28,7 @@
 
       <div class="mdev-activity-row flex flex-hor-between order-alpha kid-activity">
         <div class="mdev-activity-description">
-          <h2>Kid Play</h2>
+          <h1>Kid Play</h1>
           <p>
             For the little ones, we are building an amazing space just for them. Climbing zones, tubes, slides and soft play - they will challange their bodies and take on new adventures.
           </p>
@@ -40,7 +40,7 @@
 
       <div class="mdev-activity-row flex flex-hor-between order-beta game-activity">
         <div class="mdev-activity-description">
-          <h2>Game</h2>
+          <h1>Game</h1>
           <p>
             4,000+ sq ft of immersive arcade entertainment, 40+ games to enjoy, with options for all ages. Challenge friends head-to-head or yourself for the high score. finish your experience by redeeming your electronic tickets for prizes!
           </p>
@@ -210,7 +210,7 @@
   }
 
   .mdev-activity-description {
-    h2 {
+    h1 {
       font-family: $body-font;
       letter-spacing: 3px;
     }
@@ -248,6 +248,10 @@
         float: right;
         top: -140px;
 
+        @media screen and ($laptop-up-comp) {
+          width: 64%;
+        }
+
         @media screen and ($tablet-only-comp) {
           top: 0;
         }
@@ -278,11 +282,19 @@
         right: 0;
         float: right;
         width: 100%;
+
+        @media screen and ($laptop-up-comp) {
+          width: 85%;
+          margin: 50px 0;
+        }
       }
     }
   }
 
   .jump-activity {
+    @media screen and ($laptop-up-comp) {
+      margin-top: -200px;
+    }
     .mdev-activity-description {
       width: 54%;
       padding-top: 130px;
@@ -295,10 +307,19 @@
 
     .mdev-activity-image {
       width: 46%;
-      clip-path: polygon(0% 6%, 100% 0%, 100% 100%, 0 100%);
+      clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0 100%);
 
       @media screen and ($laptop-only-comp) {
         width: 80%;
+      }
+      
+      @media screen and ($laptop-up-comp) {
+        img {
+          width: 76%;
+          margin-top: -120px;
+          position: relative;
+          margin-bottom: 60px;
+        }
       }
     }
   }
@@ -325,6 +346,11 @@
         left: 0;
         float: left;
         width: 100%;
+
+        @media screen and ($laptop-up-comp) {
+          width: 66%;
+          margin: 0 0 100px -20px;
+        }
       }
     }
   }
