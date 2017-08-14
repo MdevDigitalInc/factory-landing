@@ -67,8 +67,6 @@
         return require('../../assets/images/' + path);
       },
       join() {
-        console.log('login');
-        console.log( this.user);
         // Clear Any Errors
         this.$validate.clearErrors();
         // Collect Fields
@@ -251,9 +249,7 @@
       padding: 15px 34px;
     }
 
-    &:active,
-    &:hover,
-    &:focus {
+    &:hover {
       background: $factory-yellow;
       cursor: pointer;
     }

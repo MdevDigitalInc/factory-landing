@@ -14,7 +14,7 @@
       <div class="mdev-main-wrapper">
         <div class="mdev-title-container">
           <h3>Opening</h3>
-          <h1 class="--font-white">Winter 2017</h1>
+          <h1 class="--font-white">Winter 2018</h1>
         </div>
       </div>
     </div>
@@ -63,6 +63,10 @@
     width: 100%;
     padding: 30vh 0;
 
+    @media screen and ($tablet-only-comp) {
+      padding: 20vh 0;
+    }
+
     h1, h3 {
       font-family: $body-font;
       margin: 0;
@@ -74,11 +78,23 @@
     }
     h1 {
       letter-spacing: 5px;
+      
+      @media screen and ($phone-only-comp) {
+        letter-spacing: 1px;
+      }
     }
 
     p {
       padding: 0 40%;
       margin: 25px 0 45px 0;
+
+      @media screen and ($tablet-only-comp) {
+        padding: 0 30%;
+      }
+
+      @media screen and ($phone-only-comp) {
+        padding: 0 10%;
+      }
     }
   }
 
