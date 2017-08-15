@@ -5,54 +5,68 @@
       <div class="mdev-activity-row flex flex-hor-between order-alpha climb-activity">
         <div class="mdev-activity-description">
           <h1>Climb</h1>
-          <p>
+          <p id="climb">
             Start at 16ft and make your way up the 75ft ropes course. Zipline between platforms and even take the plunge off the 70ft drop (if you dare)!
           </p>
         </div>
         <div class="mdev-activity-image climb-image" :style="climb.background">
-          <img :src="climb.image" />  
+          <img :src="climb.image" 
+              aria-describedby="climb"
+              alt="Zipline between platforms!"/>  
         </div>
       </div>
 
       <div class="mdev-activity-row flex flex-hor-between order-beta jump-activity">
         <div class="mdev-activity-description">
           <h1>Jump</h1>
-          <p>
+          <p id="jump">
             21,000 square feet of trampoline excitement. We've got dodgeball courts, tumble tracks, a 7,000 sqft airbag, and a joust pit. Test your skills on the Ultimate Warrior course or try to tame the Adrenalator, but make sure to save some energy for Trampoline Meltdown.
           </p>
         </div>
         <div class="mdev-activity-image jump-image" :style="jump.background">
-          <img :src="jump.image" />  
+          <img :src="jump.image" 
+              aria-describedby="jump"
+              alt="Ultimate Warrior Course."/>  
         </div>
       </div>
 
       <div class="mdev-activity-row flex flex-hor-between order-alpha kid-activity">
         <div class="mdev-activity-description">
           <h1>Kid Play</h1>
-          <p>
+          <p id="kids">
             For the little ones, we are building an amazing space just for them. Climbing zones, tubes, slides and soft play - they will challange their bodies and take on new adventures.
           </p>
         </div>
         <div class="mdev-activity-image kids-image" :style="kids.background">
-          <img :src="kids.image" />  
+          <img :src="kids.image" 
+              aria-describedby="kids"
+              alt="Kid friendly challenges."/>  
         </div>
       </div>
 
       <div class="mdev-activity-row flex flex-hor-between order-beta game-activity">
         <div class="mdev-activity-description">
           <h1>Game</h1>
-          <p>
+          <p id="games">
             4,000+ sq ft of immersive arcade entertainment, 40+ games to enjoy, with options for all ages. Challenge friends head-to-head or yourself for the high score. finish your experience by redeeming your electronic tickets for prizes!
           </p>
         </div>
         <div class="mdev-activity-image game-image" :style="game.background">
-          <img :src="game.image" />  
+          <img :src="game.image" 
+            aria-describedby="games"
+            alt="Arcade games for all ages."/>  
         </div>
       </div>
 
       <div class="mdev-plus-activities">
-        <img class="desktop" :src="loadImage('shape-activies.png')" />
-        <img class="mobile" :src="loadImage('shape-activies-mob.png')" />
+        <img 
+          class="desktop"
+          :src="loadImage('shape-activies.png')" 
+          alt="Plus virtual reality, escape rooms, axe throwing & golf simulators"/>
+        <img 
+          class="mobile" 
+          alt="Plus virtual reality, escape rooms, axe throwing & golf simulators"
+          :src="loadImage('shape-activies-mob.png')" />
       </div>
     </div>
   </section>

@@ -6,7 +6,11 @@
         <p class="mdev-large-text">
           We will be updating with photos and renderings as we build the space
         </p>
-        <h3 class="--font-white u-capitalize-initial">Sign up to get the first look!</h3>
+        <h3 class="--font-teal u-capitalize-initial">
+          <a href="#signup" title="Sign Up For Newsletter">
+            Sign up to get the first look!
+          </a>
+        </h3>
       </div>
     </div>
     <div class="mdev-opening">
@@ -120,6 +124,10 @@
 
     h2 {
       font-size: 50px;
+      @media screen and ($phone-only-comp) {
+        font-size: 25px;
+        letter-spacing: 2px;
+      }
     }
   }
 

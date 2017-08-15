@@ -1,8 +1,7 @@
 <template>
   <section class="mdev-main-hero-bkg" aria-role="presentation">
     <div class="mdev-main-hero" :style="heroStyles">
-      <div class="mdev-main-wrapper">
-      <div class="mdev-main-icons --font-white">
+    <div class="mdev-main-icons --font-white">
         <a href="https://www.facebook.com/TheFactoryLondon" aria-label="Follow us on Facebook" title="Follow us on Facebook">
           <i class="fa fa-fw fa-facebook"></i>
         </a>
@@ -13,6 +12,8 @@
           <i class="fa fa-fw fa-instagram"></i>
         </a>
       </div>
+
+      <div class="mdev-main-wrapper">
        <!-- Main Logo --> 
         <div class="mdev-main-brand">
           <img :src="loadImage('brand-the-factory.svg')" alt="The Factory London">
@@ -21,7 +22,7 @@
         <h2 class=" --font-teal">Canada's Biggest Indoor</h2>
         <h1 class=" --font-white">Family Entertainment Centre</h1>
         <a href="http://bit.ly/2vFqJr5" title="The Factory Location" target="_blank">
-          <h3 class="--font-teal pullup">100 Kellogg Ln, London, Ont</h3>
+          <h3 id="signup" class="--font-teal pullup">100 Kellogg Ln, London, Ont</h3>
         </a>
       </div>
     </div>
@@ -66,20 +67,36 @@
   @import '../../assets/styles/component-lean-main.scss';
   .pullup {
     margin-top: -10px;
+    letter-spacing: 3px;
+
+    @media screen and ($phone-only-comp) {
+      font-size: 10px;
+      margin-top: 0;
+    }
   }
 
   .mdev-main-brand {
     width: 25%;
     margin: 0 auto 40px auto;
+
+    @media screen and ($phone-only-comp) {
+      width: 60%;
+    }
   }
 
   .mdev-main-icons {
     text-align: right;
     font-size: 32px;
     position: absolute;
-    top: -65px;
     width: 100%;
-
+    top: 30px;
+    padding-right: 30px;
+    
+    @media screen and ($phone-only-comp) {
+      font-size:20px;
+      text-align: center!important;
+      padding-right: 0;
+    }
   }
 
   .mdev-main-hero-bkg {

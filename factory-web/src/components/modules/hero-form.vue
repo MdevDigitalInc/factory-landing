@@ -15,14 +15,14 @@
         </div>
         <div class="mdev-form-column"> 
           <div class="mdev-main-form">
-            <img class="mdev-form-brand" :src="loadImage('brand-the-factory.svg')" />
+            <img class="mdev-form-brand" alt="The Factory London" :src="loadImage('brand-the-factory.svg')" />
             <h4 class="u-capitalize-initial --font-white">Get exclusive news & deals</h4>
             <form action="//thefactorylondon.us16.list-manage.com/subscribe/post?u=45417d3a149e1a81af62718ef&amp;id=cda16101e2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <!-- Begin MailChimp Signup Form -->
           <div class="mdev-form-container" id="mc_embed_signup">
             <div id="mc_embed_signup_scroll">
-            <input type="text" placeholder="First Name" data-required value="" name="FNAME" class="" id="mce-FNAME">
-            <input type="email" value="" data-required name="EMAIL" placeholder="Email" class="pushdown" id="mce-EMAIL">
+            <input type="text" placeholder="First Name" data-required value="" name="FNAME" class="" id="mce-FNAME" aria-label="First Name">
+            <input type="email" value="" data-required name="EMAIL" placeholder="Email" class="pushdown" id="mce-EMAIL" aria-label="Email">
             <div id="mce-responses" class="clear">
             <div class="response" id="mce-error-response" style="display:none"></div>
             <div class="response" id="mce-success-response" style="display:none"></div>
@@ -31,9 +31,9 @@
             </div>
           </div>
 
-              <div class="clear"><input type="submit" @click.prevent="join" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="mdev-form-button u-uppercase"></div>
+              <div class="clear"><input type="submit" @click.prevent="join" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" aria-role="button" aria-label="Sign Up" class="mdev-form-button u-uppercase"></div>
           </form>
-          <!--End mc_embed_signup-->
+          <!--Ed mc_embed_signup-->
           </div>
         </div>
       </div>

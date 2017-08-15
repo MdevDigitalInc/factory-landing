@@ -2,7 +2,7 @@
   <section class="mdev-factory-vision">
     <div class="mdev-vision-hero" :style="heroStyles"> 
       <div class="mdev-main-wrapper">
-        <h2>Vision For The Factory - </br> Build your adventure</h2>
+        <h2 class="mdev-spacing" >Vision For The Factory - </br> Build your adventure</h2>
         <p class="vision-paragraph">
           We have an impressive 160,000 square feet and we want to fill every last inch with endless fun for the whole family. High ropes, zip-lines, trampoline park, ultimate warrior course, arcade, kid's soft play, laser tag, virtual reality, escape rooms, and more - these attractions are all in the plans for The Factory and are catered to all ages and skill levels.
         </p>
@@ -56,6 +56,10 @@
 	/*--------------------------------------*/
 	/* Main Component Styles                */
 	/*--------------------------------------*/
+  .mdev-spacing {
+    padding-left: 10px;
+  }
+
   .mdev-factory-vision {
     z-index: 40;
     position: relative;
@@ -129,10 +133,16 @@
 
       &:first-child {
         padding-left: 10px;
+        @media screen and ($phone-only-comp) {
+          padding-right: 10px;
+        }
       }
 
       &:last-child {
         padding-right: 10px;
+        @media screen and ($phone-only-comp) {
+          padding-left: 10px;
+        }
       }
     }
   }
