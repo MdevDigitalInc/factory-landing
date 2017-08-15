@@ -52,13 +52,8 @@ Object.keys(locales).forEach(function (lang) {
 
 // [ Vue Resource ] ------------------------------------
 // Set Global Root path
-Vue.http.options.root = 'https://vuejs-http-resource.firebaseio.com/';
 
 // Set Global Intercept 
-Vue.http.interceptors.push( (request, next) => {
-  console.log(request);
-  next(); 
-});
 //--------------------------------------[ vue-resource ]
 
 

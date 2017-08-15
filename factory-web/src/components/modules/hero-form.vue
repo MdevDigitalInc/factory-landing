@@ -17,29 +17,23 @@
           <div class="mdev-main-form">
             <img class="mdev-form-brand" :src="loadImage('brand-the-factory.svg')" />
             <h4 class="u-capitalize-initial --font-white">Get exclusive news & deals</h4>
-            <div class="mdev-form-container">
-              <input
-                data-required
-                tab-index="1"
-                aria-required="true"
-                aria-label="First Name"
-                type="text"
-                placeholder="First Name"
-                v-model="user.firstName" />
-              <input
-                data-required
-                tab-index="2"
-                aria-required="true"
-                aria-label="email"
-                type="email"
-                placeholder="Email"
-                v-model="user.email" />
-              </div>
-            <button
-              tab-index="3"
-              aria-lable="Subscribe To Our E-Newsletter"
-              @click="join"
-              class="mdev-form-button u-uppercase"> Sign Up </button>
+            <form action="//thefactorylondon.us16.list-manage.com/subscribe/post?u=45417d3a149e1a81af62718ef&amp;id=cda16101e2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <!-- Begin MailChimp Signup Form -->
+          <div class="mdev-form-container" id="mc_embed_signup">
+            <div id="mc_embed_signup_scroll">
+            <input type="text" placeholder="First Name" data-required value="" name="FNAME" class="" id="mce-FNAME">
+            <input type="email" value="" data-required name="EMAIL" placeholder="Email" class="pushdown" id="mce-EMAIL">
+            <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_45417d3a149e1a81af62718ef_cda16101e2" tabindex="-1" value=""></div>
+            </div>
+          </div>
+
+              <div class="clear"><input type="submit" @click.prevent="join" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="mdev-form-button u-uppercase"></div>
+          </form>
+          <!--End mc_embed_signup-->
           </div>
         </div>
       </div>
@@ -58,6 +52,13 @@
         user: {
           firstName: '',
           email: ''
+        },
+        dataSend: {
+          email_address: '',
+          status: "subscribed",
+          merge_fields: {
+            FNAME: ''
+          }
         }
       };
     },
@@ -78,10 +79,9 @@
           this.$validate.validateFields(formFields, 'Please fill in the required fields') &&
           this.$validate.validateEmail(emailField, 'Please use a valid e-mail address')
         ){ 
-          console.log('pass');
+         $('#mc-embedded-subscribe-form').submit();
         } else {
-        
-          console.log( 'fail' );
+          return;
         }
  
       }
@@ -181,7 +181,7 @@
       font-size: 22px;
     }
 
-    input {
+    input:not([type="submit"]) {
       display: block;
       width: 100%;
       border: none;
@@ -193,16 +193,16 @@
       font-size: 20px;
       color: black;
 
-      &:last-child {
-        margin-top: 40px;
-      }
-
       &:focus {
         outline: none;
       }
     }
     input:placeholder-shown {
       color: black !important;
+    }
+
+    .pushdown {
+      margin-top: 40px;
     }
   }
 

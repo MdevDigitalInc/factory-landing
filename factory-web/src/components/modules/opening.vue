@@ -6,7 +6,7 @@
         <p class="mdev-large-text">
           We will be updating with photos and renderings as we build the space
         </p>
-        <h3 class="--font-white u-capitalize-initial">Check back again!</h3>
+        <h3 class="--font-white u-capitalize-initial">Sign up to get the first look!</h3>
       </div>
     </div>
     <div class="mdev-opening">

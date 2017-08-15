@@ -1,8 +1,8 @@
 <template>
-  <section class="mdev-map-location"> 
+  <section class="mdev-map-location" @click="openMap"> 
       <div class="mdev-google-map" id="map"></div>
       <div class="mdev-main-wrapper">
-        <div class="mdev-building-info">
+        <div class="mdev-building-info" @click.stop>
           <h3>Keeping The Essence of the</h3>
           <h2>Kellogg's Building</h2>
 
@@ -237,6 +237,12 @@
         position: kelloggs,
         map: map
       });
+    },
+    methods: {
+      openMap: function() {
+        var url = "http://bit.ly/2vFqJr5";
+        window.open(url);
+      }
     }
   };
 </script>

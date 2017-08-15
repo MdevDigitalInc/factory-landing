@@ -3,20 +3,26 @@
     <div class="mdev-main-hero" :style="heroStyles">
       <div class="mdev-main-wrapper">
       <div class="mdev-main-icons --font-white">
-        <a href="https://twitter.com/FactoryLDNont" alt="Follow us on Twitter">
+        <a href="https://www.facebook.com/TheFactoryLondon" aria-label="Follow us on Facebook" title="Follow us on Facebook">
+          <i class="fa fa-fw fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/FactoryLDNont" aria-label="Follow us on Twitter" title="Follow us on Twitter">
           <i class="fa fa-fw fa-twitter"></i>
         </a>
-        <a href="https://www.instagram.com/factoryldnont/ " alt="Follow us on Instagram">
+        <a href="https://www.instagram.com/factoryldnont/ " aria-label="Follow us on Instagram" title="Follow us on Instagram">
           <i class="fa fa-fw fa-instagram"></i>
         </a>
       </div>
        <!-- Main Logo --> 
         <div class="mdev-main-brand">
-          <img :src="loadImage('brand-the-factory.svg')">  
+          <img :src="loadImage('brand-the-factory.svg')" alt="The Factory London">
         </div>
 
         <h2 class=" --font-teal">Canada's Biggest Indoor</h2>
         <h1 class=" --font-white">Family Entertainment Centre</h1>
+        <a href="http://bit.ly/2vFqJr5" title="The Factory Location" target="_blank">
+          <h3 class="--font-teal pullup">100 Kellogg Ln, London, Ont</h3>
+        </a>
       </div>
     </div>
     <div class="mdev-splash" :style="splashStyle"></div>
@@ -58,6 +64,9 @@
   /* Lean Import for Components           */
   /*--------------------------------------*/
   @import '../../assets/styles/component-lean-main.scss';
+  .pullup {
+    margin-top: -10px;
+  }
 
   .mdev-main-brand {
     width: 25%;
