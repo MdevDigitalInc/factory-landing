@@ -48,7 +48,7 @@
         <div class="mdev-activity-description">
           <h1>Game</h1>
           <p id="games">
-            4,000+ sq ft of immersive arcade entertainment, 40+ games to enjoy, with options for all ages. Challenge friends head-to-head or yourself for the high score. finish your experience by redeeming your electronic tickets for prizes!
+            4,000+ sq ft of immersive arcade entertainment, 40+ games to enjoy, with options for all ages. Challenge friends head-to-head or yourself for the high score. Finish your experience by redeeming your electronic tickets for prizes!
           </p>
         </div>
         <div class="mdev-activity-image game-image" :style="game.background">
