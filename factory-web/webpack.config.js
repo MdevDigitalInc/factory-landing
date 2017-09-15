@@ -132,7 +132,7 @@ module.exports = {
       persistentCache: true,
       inject: true,
       background: '#fff',
-      title: 'Zucora Work Order Portal',
+      title: 'The Factory London',
 
       icons: {
         android: true,

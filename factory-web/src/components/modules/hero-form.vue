@@ -4,7 +4,7 @@
       <div class="flex flex-wrap">
         <div class="mdev-hero-form-content">
           <h2 class="--font-teal">Opening</h2>
-          <h1>Winter 2018</h1>
+          <h1>Early 2018</h1>
           <p>
             Coming soon to London Ontario, a massive indoor amusement park with fun filled activities for all ages!
           </p>

@@ -18,7 +18,7 @@
       <div class="mdev-main-wrapper">
         <div class="mdev-title-container">
           <h2>Opening</h2>
-          <h1 class="--font-white">Winter 2018</h1>
+          <h1 class="--font-white">Early 2018</h1>
         </div>
       </div>
     </div>
