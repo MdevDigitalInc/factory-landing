@@ -32,8 +32,8 @@
       'factory-vision'  : FactoryVision,
       'opening-section' : OpeningSection,
       'activities'      : Activities,
-      'factory-map'      : FactoryMap,
-      'main-footer'      : Footer
+      'factory-map'     : FactoryMap,
+      'main-footer'     : Footer
     }
   };
 </script>

@@ -57,15 +57,15 @@
             alt="Arcade games for all ages."/>  
         </div>
       </div>
-
+      <main-renders></main-renders>
       <div class="mdev-plus-activities">
         <img 
           class="desktop"
           :src="loadImage('shape-activies.png')" 
-          alt="Plus virtual reality, escape rooms, axe throwing & golf simulators"/>
+          alt="Plus virtual reality, escape rooms, axe throwing"/>
         <img 
           class="mobile" 
-          alt="Plus virtual reality, escape rooms, axe throwing & golf simulators"
+          alt="Plus virtual reality, escape rooms, axe throwing"
           :src="loadImage('shape-activies-mob.png')" />
       </div>
     </div>
@@ -73,6 +73,9 @@
 </template>
 
 <script>
+
+  import Renders        from '../modules/renders.vue';
+
   export default {
     data: function() {
       return{
@@ -108,6 +111,9 @@
     loadImage(path){
       return require('../../assets/images/' + path);
     }
+  },
+  components: {
+    'main-renders'    : Renders
   }
 };
 </script>
