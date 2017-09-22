@@ -169,7 +169,7 @@
 
      .mdev-activity-image {
       width: 100% !important;
-      margin-bottom: 40px;
+      margin-bottom: 150px !important;
 
       img {
         width: 70% !important;
