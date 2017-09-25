@@ -29,7 +29,7 @@ export default {
       },
       slide2: {
         background: {},
-        alt: 'Lorem Ipsum solor di amet this is just a test of the broadcasting system so we can have enough words to do things with',
+        alt: 'We\’ve got big plans for The Factory. Take a look at the renderings of our entrance, ropes course, trampoline park, and the kid’s adventure zone. Are you ready to join in on the fun? Don\'t forget to sign up for our newsletter for all the latest updates.',
         title: 'Renderings'
       },
       slide3: {
@@ -121,8 +121,14 @@ export default {
     position: relative;
 
     @media screen and ($phone-only-comp) {
-      height: 55vw;
+      height: 71vw;
       background-position: center center;
+      background-size: cover;
+    }
+
+    @media screen and ($tablet-only-comp) {
+      height:35vw;
+      background-size: cover;
     }
 
     img {
@@ -153,6 +159,14 @@ export default {
     position: relative;
     top: 50%;
     transform: translate3d(0,-50%,0);
+
+    @media screen and ($tablet-only-comp) {
+      padding-right: 40px;
+    }
+
+    @media screen and ($phone-only-comp) {
+      padding: 0 20px;
+    }
   }
   .mdev-top-splash {
     position: absolute;
@@ -166,7 +180,11 @@ export default {
 
     @media screen and ($phone-only-comp) {
       width: 100%;
-      top: -5%;
+      top: -4%;
+    }
+
+    @media screen and ($tablet-only-comp) {
+      top: -12%;
     }
   }
   .mdev-bottom-splash {
@@ -182,6 +200,10 @@ export default {
     @media screen and ($phone-only-comp) {
       width: 100%;
       bottom: -3%;
+    }
+
+    @media screen and ($tablet-only-comp) {
+      bottom: -14%;
     }
   }
   .mdev-render-white {
