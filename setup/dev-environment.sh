@@ -95,7 +95,8 @@ then
   fi
 else
   echo "Not Darwin"
-  sleep 5s
+  sleep 1s
+  clear
 fi
 
 # [[ NODE JS ]].
@@ -165,37 +166,24 @@ echo "${GREEN}Installing Vue.js Globally...${NC}"
 echo
 echo
 sleep 2s
-
-# Check for existing Vue Install
-if vue
-then
-  echo "${GREEN}Vue.JS is already installed!${NC}"
-  sleep 5s
-else
-  if npm install -g vue
-  then
-    sleep 1s
-    clear
-    echo
-    echo
-    echo "${GREEN}Vue.JS Installed successfully!${NC}"
-  else
-    error_handle "There was a problem installing Vue.js - Visit http://vuejs.org for Manual Installation steps"
-  fi
-fi
+sudo npm install -g vue
+sudo npm install -g vue-cli
 
 if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
-  #[ Install Libpng for pngquant ]
-  clear
-  echo
-  echo "${YELLOW}[ INSTALLING LIBPNG ]${NC}"
-  sudo apt-get install libpng-dev
+  then
+    #[ Install Libpng for pngquant ]
+    clear
+    echo
+    echo "${YELLOW}[ INSTALLING LIBPNG ]${NC}"
+    sudo apt-get install libpng-dev
 
-  #[ Install Libtool, automake, nams and autoconf ]
-  clear 
-  echo
-  echo "${YELLOW} [ Fixing MOZJPEG ]${NC}"
-  sudo apt-get install libtool automake autoconf nasm
+    #[ Install Libtool, automake, nams and autoconf ]
+    clear 
+    echo
+    echo "${YELLOW} [ Fixing MOZJPEG ]${NC}"
+    sudo apt-get install libtool automake autoconf nasm
+  else
+    error_handle "Not Linux, Moving on..."
 fi
 
 # Install NPM dependencies
@@ -206,7 +194,7 @@ echo "${GREEN}Installing Node dependencies...${NC}"
 echo
 echo
 sleep 2s
-if cd factory-web/
+if cd vue-app-base/
   then
     npm install
 else
