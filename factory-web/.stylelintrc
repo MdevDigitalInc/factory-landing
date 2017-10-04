@@ -73,8 +73,8 @@
     "selector-max-compound-selectors": [3,{
       "message": "Lets keep it to 3 Inception levels shall we?"
     }],
-    "selector-no-id": true,
-    "selector-no-universal": true,
+    "selector-max-id": 0,
+    "selector-max-universal": 0,
     "selector-no-vendor-prefix": [true,{
       "message": "This Vendor Prefix Selector is outdated and can be replaced with something else."
     }],
