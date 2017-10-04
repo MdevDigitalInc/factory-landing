@@ -42,7 +42,6 @@ echo "This Script will install and configure all the necessary Software & Depend
 echo
 echo "${YELLOW}[ Including ]"
 echo
-echo "- Git"
 echo "- Node & NPM"
 echo "- Vue"
 echo "- NPM Dependencies${NC}"
@@ -97,185 +96,6 @@ then
 else
   echo "Not Darwin"
   sleep 5s
-fi
-
-# Check for GIT installation & Configuration
-if git --version
-then
-    clear
-    echo
-    echo "${GREEN}Git is installed... Moving on to Git Configuration${NC}"
-    sleep 5s
-  else
-    # [ INSTALL GIT BASED ON OS ]
-    if [ "$(uname)" == "Darwin" ]
-    then
-      # Mac / OSX 
-      # Check for BREW
-      if brew help
-      then
-        echo "${GREEN}Brew is installed... proceeding with Node."
-        sleep 2s
-      else
-        echo
-        echo "${GREEN}Installing Homebrew Package Manager for OSX.${NC}"
-        sleep 2s
-        # Install brew
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-      fi
-      #Install Git
-      clear
-      echo
-      echo "${GREEN}Installing Git...${NC}"
-      sleep 2s
-      brew install git
-    
-    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
-    then
-      # Install Git on LInux
-      apt-get install git
-
-    elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]
-    then
-      # Check for Chocolatey package manager
-      if choco
-      then
-        echo
-        echo "${GREEN} Chocolatey is installed... proceeding with Node."
-        sleep 2s
-      else
-        # Install chocolatey via Command Prompt
-        iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
-      fi
-      # Install Git on Windows
-      choco install git.install
-    elif *
-    then
-      error_handle "Could Not Find Your OS. Please Install Git Manually And Try Again."
-    fi
-fi
-
-# [ CONFIGURE GIT ]
-if git config --global user.name
-then
-  # Git Config Already done.
-  clear
-  echo
-  echo "${GREEN}Git global parameters already configured. Proceeding.${NC}"
-  sleep 5s
-else
-  echo "${YELLOW}Configuring Git Base Parameters.${NC}"
-  echo
-  sleep 2s
-  # Configure --global user.name
-  read -p "${GREEN}Please enter your --global user.name...${NC}  " username
-  git config --global user.name $username
-  sleep 2s
-  # Configure --global user.email
-  echo
-  read -p "${GREEN}Please enter your --global user.email...${NC}  " useremail
-  git config --global user.email $useremail
-  echo
-  echo "${GREEN}Finished Configuring Git. Proceeding.${NC}"
-fi
-
-sleep 2s
-clear
-echo 
-echo "${GREEN}Setting Up SSH Keys${NC}"
-echo
-sleep 3s
-
-# [ GET RSA KEYS SETUP ]
-if ls -al ~/.ssh/id_rsa.pub
-then
-  # ID Setup Moving On
-  clear
-  echo
-  echo "${GREEN}Public Key Already Generated... Proceeding.${NC}"
-  sleep 2s
-else
-  # Generate ID
-  clear
-  echo
-  echo "${GREEN}Generating RSA Key Pairs..."
-  echo
-  sleep 2s
-  # Generate SSH Key
-  read -p "${YELLOW}Please Enter the Same Email Used For user.email...${NC}" useremailrsa
-  ssh-keygen -t rsa -b 4096 $useremailrsa
-  sleep 1s
-  # Add to SSH Agent
-  echo
-  echo "${GREEN}Adding Key to SSH Agent...${NC}"
-  sleep 2s
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_rsa
-  sleep 2s
-fi
-
-clear
-echo
-echo "${GREEN}Adding RSA Keys to Github Account...${NC}"
-
-# Use Key on Mac.
-if [ "$(uname)" == "Darwin" ]
-then
-  #Copy key to Clipboard
-  pbcopy < ~/.ssh/id_rsa.pub
-  clear
-  cat ~/.ssh/id_rsa.pub
-  echo
-  echo "${YELLO}Your Public SSH Key is Now Loaded In Your ${GREEN}CLIPBOARD (ctrl/cmd+v)${NC}"
-  echo
-  echo "${YELLOW} Please visit https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
-  echo "For instructions on how to add it to your GitHub Account."
-  echo
-  sleep 2s
-  read -p "${GREEN}Ready To Proceed?${NC}"
-
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
-then
-  clear
-  echo
-  echo "${GREEN}Installing XClip....${NC}"
-  sleep 1s
-  # Install XClip
-  sudo apt-get install xclip
-  # Copy RSA to Clipboard
-  echo 
-  echo "${GREEN}Copying RSA Key To Clipboard...${NC}"
-  sleep 2s
-  xclip -sel clip < ~/.ssh/id_rsa.pub
-  cat ~/.ssh/id_rsa.pub
-  echo
-  echo "${YELLO}Your Public SSH Key is Now Loaded In Your ${GREEN}CLIPBOARD (ctrl/cmd+v)${NC}"
-  echo
-  echo "${YELLOW} Please visit https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
-  echo "For instructions on how to add it to your GitHub Account."
-  sleep 2s
-  echo
-  read -p "${GREEN}Ready To Proceed?${NC}"
-
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]
-then
-  # Copy RSA Key To Clipboard
-  clear
-  echo
-  echo "${GREEN}Copying RSA Key to Clipboard..${NC}"
-  sleep 2s
-  clip < ~/.ssh/id_rsa.pub
-  echo
-  echo "${YELLO}Your Public SSH Key is Now Loaded In Your ${GREEN}CLIPBOARD (ctrl/cmd+v)${NC}"
-  echo
-  echo "${YELLOW} Please visit https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"
-  echo "For instructions on how to add it to your GitHub Account."
-  sleep 2s
-  echo
-  read -p "${GREEN}Ready To Proceed?${NC}"
-elif *
-then
-  error_handle "Your OS Was Not Found... Please Setup SSH manually."
 fi
 
 # [[ NODE JS ]].
@@ -364,6 +184,20 @@ else
   fi
 fi
 
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
+  #[ Install Libpng for pngquant ]
+  clear
+  echo
+  echo "${YELLOW}[ INSTALLING LIBPNG ]${NC}"
+  sudo apt-get install libpng-dev
+
+  #[ Install Libtool, automake, nams and autoconf ]
+  clear 
+  echo
+  echo "${YELLOW} [ Fixing MOZJPEG ]${NC}"
+  sudo apt-get install libtool automake autoconf nasm
+fi
+
 # Install NPM dependencies
 sleep 1s
 clear
@@ -372,7 +206,7 @@ echo "${GREEN}Installing Node dependencies...${NC}"
 echo
 echo
 sleep 2s
-if cd vue-app-base/
+if cd factory-web/
   then
     npm install
 else
