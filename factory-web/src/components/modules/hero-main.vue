@@ -20,7 +20,7 @@
         </div>
 
         <h2 class=" --font-teal">Canada's Biggest Indoor</h2>
-        <h1 class=" --font-white">Family Entertainment Centre</h1>
+        <h1 class=" --font-white">This place is awesome</h1>
         <a href="http://bit.ly/2vFqJr5" title="The Factory Location" target="_blank">
           <h3 id="signup" class="--font-teal pullup">100 Kellogg Ln, London, Ont</h3>
         </a>
