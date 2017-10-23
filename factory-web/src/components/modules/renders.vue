@@ -37,49 +37,49 @@ export default {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-atrium.jpg') + ')',
         },
-        alt: 'Obstacle Course'       
+        alt: 'Atrium Zone'       
       },
       slide4: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-atrium-second.jpg') + ')',
         },
-        alt: 'Trampoline Zone'       
+        alt: 'Atrium Zone Alternate View'       
       },
        slide5: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-kids.jpg') + ')',
         },
-        alt: 'Trampoline Games'       
+        alt: 'Kids Zone View 1'       
       },     
       slide6: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-kids-second.jpg') + ')',
         },
-        alt: 'Kids Play area'       
+        alt: 'Kids Zone View 2'       
       },
       slide7: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-kids-third.jpg') + ')',
         },
-        alt: 'The Factory Main Entrance'       
+        alt: 'Kids Zone View 3'       
       },
       slide8: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-atrium-overview.jpg') + ')',
         },
-        alt: 'The Factory Main Entrance'       
+        alt: 'Atrium Overview'       
       },
       slide9: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-atrium-overview-second.jpg') + ')',
         },
-        alt: 'The Factory Main Entrance'       
+        alt: 'Atrium Overview Side'       
       },
       slide10: {
         background: {
           backgroundImage: 'url(' + this.loadImage('renders-atrium-overview-third.jpg') + ')',
         },
-        alt: 'The Factory Main Entrance'       
+        alt: 'Atrium Overview Top'       
       }
     };
   },
