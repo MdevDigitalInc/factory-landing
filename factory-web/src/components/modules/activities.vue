@@ -10,9 +10,9 @@
           </p>
         </div>
         <div class="mdev-activity-image climb-image" :style="climb.background">
-          <img :src="climb.image" 
+          <img :src="climb.image"
               aria-describedby="climb"
-              alt="Zipline between platforms!"/>  
+              alt="Zipline between platforms!"/>
         </div>
       </div>
 
@@ -24,9 +24,9 @@
           </p>
         </div>
         <div class="mdev-activity-image jump-image" :style="jump.background">
-          <img :src="jump.image" 
+          <img :src="jump.image"
               aria-describedby="jump"
-              alt="Ultimate Warrior Course."/>  
+              alt="Ultimate Warrior Course."/>
         </div>
       </div>
 
@@ -38,9 +38,9 @@
           </p>
         </div>
         <div class="mdev-activity-image kids-image" :style="kids.background">
-          <img :src="kids.image" 
+          <img :src="kids.image"
               aria-describedby="kids"
-              alt="Kid friendly challenges."/>  
+              alt="Kid friendly challenges."/>
         </div>
       </div>
 
@@ -52,19 +52,19 @@
           </p>
         </div>
         <div class="mdev-activity-image game-image" :style="game.background">
-          <img :src="game.image" 
+          <img :src="game.image"
             aria-describedby="games"
-            alt="Arcade games for all ages."/>  
+            alt="Arcade games for all ages."/>
         </div>
       </div>
       <main-renders></main-renders>
       <div class="mdev-plus-activities">
-        <img 
+        <img
           class="desktop"
-          :src="loadImage('shape-activies.png')" 
+          :src="loadImage('shape-activies.png')"
           alt="Plus virtual reality, escape rooms, axe throwing"/>
-        <img 
-          class="mobile" 
+        <img
+          class="mobile"
           alt="Plus virtual reality, escape rooms, axe throwing"
           :src="loadImage('shape-activies-mob.png')" />
       </div>
@@ -83,31 +83,31 @@
           background: {
             backgroundImage: 'url(' + this.loadImage('shape-green.png') + ')',
           },
-          image: this.loadImage('ropes.png') 
+          image: this.loadImage('ropes.png')
         },
         jump: {
           background: {
             backgroundImage: 'url(' + this.loadImage('shape-red.png') + ')',
           },
-          image: this.loadImage('rings.png') 
+          image: this.loadImage('rings.png')
         },
         kids: {
           background: {
             backgroundImage: 'url(' + this.loadImage('shape-yellow.png') + ')',
           },
-          image: this.loadImage('climbing.png') 
+          image: this.loadImage('climbing.png')
         },
         game: {
           background: {
             backgroundImage: 'url(' + this.loadImage('shape-blue.png') + ')',
           },
-          image: this.loadImage('controller.png') 
+          image: this.loadImage('controller.png')
         },
       };
     },
     methods:{
     // Get Compiled image Paths
-    
+
     loadImage(path){
       return require('../../assets/images/' + path);
     }
@@ -118,9 +118,9 @@
 };
 </script>
 
-<style lang="scss" scoped> 
+<style lang="scss" scoped>
 
-  
+
 	/*-----/
 	Global Main
 	/-----*/
@@ -132,10 +132,10 @@
   @media screen and ($phone-only-comp) {
      .flex {
         flex-wrap: wrap;
-     } 
+     }
 
      .mdev-activity-description {
-        width: 100% !important; 
+        width: 100% !important;
      }
 
      .mdev-activity-image {
@@ -161,10 +161,10 @@
   @media screen and ($tablet-only-comp) {
      .flex {
         flex-wrap: wrap;
-     } 
+     }
 
      .mdev-activity-description {
-        width: 100% !important; 
+        width: 100% !important;
      }
 
      .mdev-activity-image {
@@ -312,8 +312,11 @@
   }
 
   .jump-activity {
-    @media screen and ($laptop-up-comp) {
+    @media screen and ($desktop-up-comp) {
       margin-top: -200px;
+    }
+    @media screen and ($laptop-only-comp) {
+      margin-top: -160px;
     }
     .mdev-activity-description {
       width: 54%;
@@ -332,7 +335,7 @@
       @media screen and ($laptop-only-comp) {
         width: 80%;
       }
-      
+
       @media screen and ($laptop-up-comp) {
         img {
           width: 76%;

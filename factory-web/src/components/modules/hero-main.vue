@@ -14,7 +14,7 @@
       </div>
 
       <div class="mdev-main-wrapper">
-       <!-- Main Logo --> 
+       <!-- Main Logo -->
         <div class="mdev-main-brand">
           <img :src="loadImage('brand-the-factory.svg')" alt="The Factory London">
         </div>
@@ -50,7 +50,7 @@
 
     methods:{
       // Get Compiled image Paths
-      
+
       loadImage(path){
         return require('../../assets/images/' + path);
       }
@@ -68,6 +68,11 @@
   .pullup {
     margin-top: -10px;
     letter-spacing: 3px;
+
+    @media screen and ($tablet-only-comp) {
+      margin-top: 0;
+
+    }
 
     @media screen and ($phone-only-comp) {
       font-size: 10px;
@@ -91,7 +96,7 @@
     width: 100%;
     top: 30px;
     padding-right: 30px;
-    
+
     @media screen and ($phone-only-comp) {
       font-size:20px;
       text-align: center!important;
@@ -112,11 +117,11 @@
     background-position: center top;
     padding-bottom: 70px;
     clip-path: polygon(0 0, 100% 0%, 100% 98%, 0 85%);
-    
+
     @media screen and ($laptop-only-comp) {
       padding-bottom: 230px;
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
-    } 
+    }
 
     @media screen and ($tablet-only-comp) {
       padding-bottom: 190px;
