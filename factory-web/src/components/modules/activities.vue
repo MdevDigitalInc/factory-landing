@@ -298,6 +298,7 @@
       float: right;
       position: relative;
       right: 0;
+      padding-bottom: 100px;
       background-position-x: right;
 
       img {
@@ -309,6 +310,10 @@
         @media screen and ($laptop-up-comp) {
           width: 85%;
           margin: 50px 0;
+        }
+        
+        @media screen and ($phone-only-comp){
+          top: 20%;
         }
       }
     }
@@ -366,6 +371,8 @@
       position: relative;
       float: left;
       left: -60px;
+      padding: 40px;
+      margin-bottom: 0;
 
       img {
         position: relative;
