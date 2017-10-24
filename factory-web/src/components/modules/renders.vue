@@ -107,6 +107,10 @@ export default {
     position: relative;
     z-index: 10;
     margin: 15vw 0;
+
+    @media screen and ($tablet-only-comp) {
+      margin: 0;
+    }
   }
   .order1 {
     order: 1;
