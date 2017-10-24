@@ -7,13 +7,14 @@
         <p> {{slide2.alt}} </p>
       </div>
     </div>
-    <div class="mdev-render-slide mdev-render-third order3" :style="slide3.background"></div>
-    <div class="mdev-render-slide mdev-render-third mdev-render-white order3" :style="slide4.background"></div>
+    <div class="mdev-render-slide mdev-render-half order3" :style="slide3.background"></div>
+    <div class="mdev-render-slide mdev-render-half mdev-render-white order3" :style="slide4.background"></div>
     <div class="mdev-render-slide mdev-render-third order3" :style="slide5.background"></div>
-    <div class="mdev-render-slide mdev-render-half order3" :style="slide6.background"></div>
-    <div class="mdev-render-slide mdev-render-half order3" :style="slide7.background"></div>
-    <div class="mdev-top-splash order4" :style="topSplash"></div>
-    <div class="mdev-bottom-splash order4" :style="bottomSplash"></div>
+    <div class="mdev-render-slide mdev-render-third order3" :style="slide6.background"></div>
+    <div class="mdev-render-slide mdev-render-third order3" :style="slide7.background"></div>
+    <div class="mdev-render-slide mdev-render-third order3" :style="slide8.background"></div>
+    <div class="mdev-render-slide mdev-render-third order3" :style="slide9.background"></div>
+    <div class="mdev-render-slide mdev-render-third order3" :style="slide10.background"></div>
   </section>
 </template>
 
@@ -34,39 +35,51 @@ export default {
       },
       slide3: {
         background: {
-          backgroundImage: 'url(' + this.loadImage('renders-obstacles.png') + ')',
+          backgroundImage: 'url(' + this.loadImage('renders-atrium.jpg') + ')',
         },
-        alt: 'Obstacle Course'       
+        alt: 'Atrium Zone'       
       },
       slide4: {
         background: {
-          backgroundImage: 'url(' + this.loadImage('renders-trampoline.png') + ')',
+          backgroundImage: 'url(' + this.loadImage('renders-atrium-second.jpg') + ')',
         },
-        alt: 'Trampoline Zone'       
+        alt: 'Atrium Zone Alternate View'       
       },
        slide5: {
         background: {
-          backgroundImage: 'url(' + this.loadImage('renders-trampoline-second.png') + ')',
+          backgroundImage: 'url(' + this.loadImage('renders-kids.jpg') + ')',
         },
-        alt: 'Trampoline Games'       
+        alt: 'Kids Zone View 1'       
       },     
       slide6: {
         background: {
-          backgroundImage: 'url(' + this.loadImage('renders-kids-play.png') + ')',
+          backgroundImage: 'url(' + this.loadImage('renders-kids-second.jpg') + ')',
         },
-        alt: 'Kids Play area'       
+        alt: 'Kids Zone View 2'       
       },
       slide7: {
         background: {
-          backgroundImage: 'url(' + this.loadImage('renders-atrium.png') + ')',
+          backgroundImage: 'url(' + this.loadImage('renders-kids-third.jpg') + ')',
         },
-        alt: 'The Factory Main Entrance'       
+        alt: 'Kids Zone View 3'       
       },
-      topSplash: {
-        backgroundImage: 'url(' + this.loadImage('renders-splash-top.png') + ')'
+      slide8: {
+        background: {
+          backgroundImage: 'url(' + this.loadImage('renders-atrium-overview.jpg') + ')',
+        },
+        alt: 'Atrium Overview'       
       },
-      bottomSplash: {
-        backgroundImage: 'url(' + this.loadImage('renders-splash-bottom.png') + ')'
+      slide9: {
+        background: {
+          backgroundImage: 'url(' + this.loadImage('renders-atrium-overview-second.jpg') + ')',
+        },
+        alt: 'Atrium Overview Side'       
+      },
+      slide10: {
+        background: {
+          backgroundImage: 'url(' + this.loadImage('renders-atrium-overview-third.jpg') + ')',
+        },
+        alt: 'Atrium Overview Top'       
       }
     };
   },
@@ -115,7 +128,7 @@ export default {
   }
   .mdev-render-slide {
     height: 24vw;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: center top;
     background-repeat: no-repeat;
     position: relative;
