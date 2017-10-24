@@ -266,12 +266,16 @@
       display: none;
     }
 
-    @media screen and ($laptop-only-comp ) {
-      top: 15vw;
+    @media screen and ( $laptop-only-comp ) {
+      top: 18vw;
     }
     
-    @media screen and ($tablet-only-comp ) {
+    @media screen and ( $tablet-only-comp ) {
       top: 37vw;
+    }
+
+    @media screen and ( $desktop-only-comp ) {
+      top: 122px;
     }
 
     @media screen and ( $xl-up-comp ) {
@@ -281,7 +285,7 @@
     img {
       width: 31%;
 
-      @media screen and ($tablet-only-comp) {
+      @media screen and ( $tablet-only-comp ) {
         width: 51%;  
       }
 

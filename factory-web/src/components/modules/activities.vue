@@ -192,6 +192,9 @@
     padding: 80px 0;
     position: relative;
     z-index: 200;
+    @media screen and ($tablet-only-comp) {
+      padding: 0;
+    }
   }
 
   .order-beta {
