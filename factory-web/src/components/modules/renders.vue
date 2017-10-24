@@ -103,10 +103,10 @@ export default {
 	/-----*/
 	@import '../../assets/styles/component-lean-main.scss';
   .mdev-main-renders {
-    background: $factory-teal;
+    background: #fff;
     position: relative;
     z-index: 10;
-    margin: 15vw 0;
+    margin: 7vw 0;
   }
   .order1 {
     order: 1;
@@ -116,6 +116,7 @@ export default {
   }
   .order2 {
     order: 2;
+    background: $factory-teal;
     @media screen and ($phone-only-comp) {
       order: 1;
     }
