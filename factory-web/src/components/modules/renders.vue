@@ -107,6 +107,10 @@ export default {
     position: relative;
     z-index: 10;
     margin: 15vw 0;
+
+    @media screen and ($tablet-only-comp) {
+      margin: -2vw 0 0 0;
+    }
   }
   .order1 {
     order: 1;
@@ -140,7 +144,7 @@ export default {
     }
 
     @media screen and ($tablet-only-comp) {
-      height:35vw;
+      height:42vw;
       background-size: cover;
     }
 

@@ -96,7 +96,7 @@
       margin: 25px 0 45px 0;
 
       @media screen and ($tablet-only-comp) {
-        padding: 0 30%;
+        padding: 0 23%;
       }
 
       @media screen and ($phone-only-comp) {
