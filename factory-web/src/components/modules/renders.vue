@@ -106,7 +106,7 @@ export default {
     background: $factory-teal;
     position: relative;
     z-index: 10;
-    margin: 15vw 0;
+    margin: 5vw 0;
 
     @media screen and ($tablet-only-comp) {
       margin: -2vw 0 0 0;
