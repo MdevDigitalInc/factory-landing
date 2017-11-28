@@ -2,13 +2,14 @@
   <section class="mdev-opening-soon">
     <div class="mdev-activities-soon" :style="heroStyles">
       <div class="mdev-main-wrapper  u-text-center --font-white">
-        <h1 class="u-uppercase">What else is there to do?</h1>
+        <h1 class="u-uppercase">Come work for us!</h1>
         <p class="mdev-large-text">
-          We will be updating with photos and renderings as we build the space
+          We have many full and part-time positions that start in February.</br></br>
+          Positions will be available in all areas of The Factory - trampoline, high ropes, cash, guest services and cleaning.</br>Apply now!
         </p>
         <h3 class="--font-teal u-capitalize-initial">
-          <a href="#signup" title="Sign Up For Newsletter">
-            Sign up to get the first look!
+          <a href="https://secure.collage.co/jobs/thefactorylondon" target="_blank" title="See all job opportunities with The Factory!">
+            See all job opportunities
           </a>
         </h3>
       </div>
@@ -43,17 +44,17 @@
 
     methods:{
       // Get Compiled image Paths
-      
+
       loadImage(path){
         return require('../../assets/images/' + path);
       }
     }
 	};
- 
+
 </script>
 
-<style lang="scss" scoped> 
-  
+<style lang="scss" scoped>
+
 	/*-----/
 	Global Main
 	/-----*/
@@ -85,7 +86,7 @@
     }
     h1 {
       letter-spacing: 5px;
-      
+
       @media screen and ($phone-only-comp) {
         letter-spacing: 1px;
       }
@@ -136,7 +137,7 @@
     position: relative;
     left: 50%;
     transform: translate3d( -50%, 0 ,0);
-    
+
     h1, h2 {
       font-family: $body-font;
     }
