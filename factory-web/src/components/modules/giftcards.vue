@@ -66,6 +66,9 @@
     z-index: 30;
     margin-bottom: -34vh;
     margin-top: -40px;
+    @media screen and ( $laptop-only-comp ) {
+      background-size: 130%;
+    }
 
     @media screen and ( $tablet-only-comp ) {
       margin-top: -30px;
