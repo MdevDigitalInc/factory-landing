@@ -1,5 +1,5 @@
 <template>
-  <section class="mdev-signup-area"> 
+  <section class="mdev-signup-area">
     <div class="mdev-main-wrapper">
       <div class="flex flex-wrap">
         <div class="mdev-hero-form-content">
@@ -13,7 +13,7 @@
           </p>
           <h3 class="u-capitalize-initial --font-teal">Subscribe to our e-newsletter</h3>
         </div>
-        <div class="mdev-form-column"> 
+        <div class="mdev-form-column">
           <div class="mdev-main-form">
             <img class="mdev-form-brand" alt="The Factory London" :src="loadImage('brand-the-factory.svg')" />
             <h4 class="u-capitalize-initial --font-white">Get exclusive news & deals</h4>
@@ -73,17 +73,17 @@
         // Collect Fields
         var formFields = $('[data-required]');
         var emailField = $('input[type="email"]');
-      
+
         // Validate Fields
         if (
           this.$validate.validateFields(formFields, 'Please fill in the required fields') &&
           this.$validate.validateEmail(emailField, 'Please use a valid e-mail address')
-        ){ 
+        ){
          $('#mc-embedded-subscribe-form').submit();
         } else {
           return;
         }
- 
+
       }
     }
 
@@ -100,9 +100,8 @@
   .mdev-signup-area {
     position: relative;
     z-index: 30;
-    margin-bottom: -10vw;
   }
-  
+
   .mdev-hero-form-content {
     width: 50%;
     padding-left: 16%;
@@ -139,7 +138,7 @@
       color: black;
       margin-bottom: 20px;
       font-weight: 300;
-    } 
+    }
   }
 
   .mdev-form-column {
@@ -269,13 +268,13 @@
     @media screen and ( $laptop-only-comp ) {
       top: 18vw;
     }
-    
+
     @media screen and ( $tablet-only-comp ) {
       top: 37vw;
     }
 
     @media screen and ( $desktop-only-comp ) {
-      top: 122px;
+      top: -10px;
     }
 
     @media screen and ( $xl-up-comp ) {
@@ -286,7 +285,7 @@
       width: 31%;
 
       @media screen and ( $tablet-only-comp ) {
-        width: 51%;  
+        width: 51%;
       }
 
       @media screen and ( $xl-up-comp ) {

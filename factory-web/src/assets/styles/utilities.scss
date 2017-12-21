@@ -16,6 +16,10 @@
   text-transform: initial;
 }
 
+.u-lowercase {
+  text-transform: lowercase;
+}
+
 .u-text-left {
   text-align: left;
 }
@@ -36,7 +40,7 @@
   vertical-align: bottom;
 }
 
-.u-align-middle { 
+.u-align-middle {
   vertical-align: middle;
 }
 
@@ -45,7 +49,7 @@
 }
 
 .u-hidden-phone {
-  
+
   @media #{$phone-only} {
     display: none;
   }
