@@ -6,7 +6,7 @@
            <h1 class="u-uppercase">
              <span class="u-heading-font">
              Gift Certificates</span></br>
-             <span class="u-lowercase">are now avaliable!</span></h1>
+             <span class="u-lowercase">are now available!</span></h1>
              <a
              class="mdev-form-button"
               href="https://fareharbor.com/embeds/book/thefactorylondon/items/71213/calendar/?flow=29907"
