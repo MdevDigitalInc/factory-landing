@@ -6,7 +6,7 @@
            <h1 class="u-uppercase">
              <span class="u-heading-font">
              Gift Certificates</span></br>
-             <span class="u-lowercase">are now available!</span></h1>
+             <span class="u-lowercase">are available!</span></h1>
              <a
              class="mdev-form-button"
               href="https://fareharbor.com/embeds/book/thefactorylondon/items/71213/calendar/?flow=29907"
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="mdev-gift-bow">
-      <img :src="loadImage('xmas-bow.png')" />
+      <img :src="loadImage('flags.png')" />
     </div>
   </section>
 </template>
@@ -95,7 +95,7 @@
       }
 
       @media screen and ( $laptop-up-comp ) {
-        padding: 20vh 0 35vh;
+        padding: 20vh 0 25vh;
       }
     }
     h1 {
@@ -128,7 +128,7 @@
 
     @media screen and ( $laptop-up-comp ) {
       min-width: 300px;
-      width: 27%;
+      width: 35%;
     }
     @media screen and ( $phone-only-comp ) {
       width: 53%;
@@ -186,7 +186,8 @@
     order: 1;
 
     @media screen and ( $tablet-up-comp ) {
-      width: 58%;
+      width: 45%;
+      padding-right: 12%;
       margin: -9vh 0 9vh;
       order: 2;
     }
